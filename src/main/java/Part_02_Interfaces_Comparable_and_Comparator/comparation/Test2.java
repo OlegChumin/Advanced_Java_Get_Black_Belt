@@ -11,16 +11,18 @@ public class Test2 {
         Employee employee1 = new Employee(100, "Vlad", "Kiev", 3000);
         Employee employee2 = new Employee(200, "Sunil", "India", 2000);
         Employee employee3 = new Employee(50, "Sandeep", "India", 5000);
+        Employee employee4 = new Employee(75, "Sandeep", "Pakistan", 4000);
 
         employeeList.add(employee1);
         employeeList.add(employee2);
         employeeList.add(employee3);
+        employeeList.add(employee4);
 
         System.out.println("Before sorting...\n" + employeeList);
         Collections.sort(employeeList);
         System.out.println("After sorting...\n" + employeeList);
 
-        Arrays.sort(new Employee[]{employee1, employee2, employee3}); // remove Comparable implementation and
+        Arrays.sort(new Employee[]{employee1, employee2, employee3, employee4}); // remove Comparable implementation and
         // then it will throw exception
     }
 }
@@ -59,10 +61,10 @@ class Employee implements Comparable<Employee> {
 //        }
 //    }
 
-    @Override
-    public int compareTo(Employee anotherEmployee) {
-        return this.id - anotherEmployee.id;
-    }
+//    @Override
+//    public int compareTo(Employee anotherEmployee) {
+//        return this.id - anotherEmployee.id;
+//    }
 
 //    @Override
 //    public int compareTo(Employee anotherEmployee) {
@@ -73,4 +75,13 @@ class Employee implements Comparable<Employee> {
 //    public int compareTo(Employee anotherEmployee) {
 //        return this.name.compareTo(anotherEmployee.name);
 //    }
+
+    @Override
+    public int compareTo(Employee anotherEmployee) {
+        int result = this.name.compareTo(anotherEmployee.name);
+        if (result == 0) {
+            result = this.surname.compareTo(anotherEmployee.surname);
+        }
+        return result;
+    }
 }
