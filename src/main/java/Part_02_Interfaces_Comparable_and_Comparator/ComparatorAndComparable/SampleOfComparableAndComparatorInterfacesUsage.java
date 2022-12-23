@@ -18,6 +18,10 @@ public class SampleOfComparableAndComparatorInterfacesUsage {
         employeeList.add(employee3);
         employeeList.add(employee4);
 
+        System.out.println("Before sorting...\n" + employeeList);
+        Collections.sort(employeeList);
+        System.out.println("After sorting...\n" + employeeList);
+        printLine();
 
         System.out.println("Before sorting...\n" + employeeList);
         Collections.sort(employeeList, new NameComparator());
