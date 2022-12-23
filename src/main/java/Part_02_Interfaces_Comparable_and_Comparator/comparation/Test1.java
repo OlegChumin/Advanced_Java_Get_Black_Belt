@@ -1,6 +1,7 @@
 package Part_02_Interfaces_Comparable_and_Comparator.comparation;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Test1 {
@@ -15,5 +16,10 @@ public class Test1 {
         list.add("Uiliam");
         list.add("Katana");
         list.add("Python");
+        System.out.println("Before sorting...");
+        System.out.println(list);
+        Collections.sort(list);
+        System.out.println("After sorting...");
+        System.out.println(list);
     }
 }
