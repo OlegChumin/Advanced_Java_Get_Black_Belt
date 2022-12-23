@@ -68,4 +68,9 @@ class Employee implements Comparable<Employee> {
 //    public int compareTo(Employee anotherEmployee) {
 //        return this.id.compareTo(anotherEmployee.id); //change int id to Integer id in Employee
 //    }
+
+//    @Override
+//    public int compareTo(Employee anotherEmployee) {
+//        return this.name.compareTo(anotherEmployee.name);
+//    }
 }
