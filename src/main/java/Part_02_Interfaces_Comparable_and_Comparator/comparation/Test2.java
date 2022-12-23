@@ -20,7 +20,7 @@ public class Test2 {
         Collections.sort(employeeList);
         System.out.println("After sorting...\n" + employeeList);
 
-        Arrays.sort(new Employee[] {employee1, employee2, employee3}); // remove Comparable implementation and
+        Arrays.sort(new Employee[]{employee1, employee2, employee3}); // remove Comparable implementation and
         // then it will throw exception
     }
 }
@@ -48,14 +48,24 @@ class Employee implements Comparable<Employee> {
                 '}';
     }
 
+//    @Override
+//    public int compareTo(Employee anotherEmployee) {
+//        if (this.id == anotherEmployee.id) {
+//            return 0;
+//        } else if (this.id < anotherEmployee.id) {
+//            return -1;
+//        } else {
+//            return 1;
+//        }
+//    }
+
     @Override
     public int compareTo(Employee anotherEmployee) {
-        if (this.id == anotherEmployee.id) {
-            return 0;
-        } else if (this.id < anotherEmployee.id) {
-            return -1;
-        } else {
-            return 1;
-        }
+        return this.id - anotherEmployee.id;
     }
+
+//    @Override
+//    public int compareTo(Employee anotherEmployee) {
+//        return this.id.compareTo(anotherEmployee.id); //change int id to Integer id in Employee
+//    }
 }
