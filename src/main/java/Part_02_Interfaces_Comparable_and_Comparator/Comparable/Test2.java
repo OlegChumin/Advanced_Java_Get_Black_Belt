@@ -1,4 +1,4 @@
-package Part_02_Interfaces_Comparable_and_Comparator.comparation;
+package Part_02_Interfaces_Comparable_and_Comparator.Comparable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
