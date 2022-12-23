@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Test2 {
+public class SamplesOfComparabaleInterfaceUsage {
     public static void main(String[] args) {
         List<Employee> employeeList = new ArrayList<>();
         Employee employee1 = new Employee(100, "Vlad", "Kiev", 3000);
