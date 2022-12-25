@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SampleOfGenerics {
+    //Type safe and reusable code
     public static void main(String[] args) {
         List list = new ArrayList();
         list.add(new Object());
