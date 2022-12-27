@@ -1,4 +1,4 @@
-package Part_02_Generics;
+package Part_03_Generics;
 
 import java.util.ArrayList;
 import java.util.List;

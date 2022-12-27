@@ -1,4 +1,4 @@
-package Part_02_Generics;
+package Part_03_Generics;
 
 public class SampleOfParameterizedClass {
     public static void main(String[] args) {
