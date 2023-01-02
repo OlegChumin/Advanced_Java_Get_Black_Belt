@@ -1,6 +1,8 @@
 package Part_06_Lambda.Part_41;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class StudentInfo {
     public static void main(String[] args) {
@@ -28,6 +30,8 @@ public class StudentInfo {
         search.testStudents(students, new CheckOverGrade());
         search.testStudents(students, new CheckUnderAge());
         search.testStudents(students, new CheckMixConditions());
+
+//        int student = 3;
 
         search.testStudents(students, new StudentChecks() {
             @Override
@@ -69,5 +73,14 @@ public class StudentInfo {
 
         StudentChecks studentChecks = student -> student.averageGrade > 8;
         search.testStudents(students, studentChecks);
+
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.course - o2.course;
+            }
+        });
+
+        Collections.sort(students, (o1, o2) -> o1.age - o2.age);
     }
 }

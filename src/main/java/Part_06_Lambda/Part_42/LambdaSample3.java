@@ -5,6 +5,7 @@ public class LambdaSample3 {
         lambdaMethod(h -> h.length());
         lambdaMethod((h) -> h.length());
         lambdaMethod((String str) -> str.length());
+//        System.out.println(str);
         lambdaMethod(str->str.length());
         /**
          * lambdaMethod((String str1, String str2)-> {return str1.length()+ str2.length});
@@ -14,6 +15,11 @@ public class LambdaSample3 {
          * */
         lambdaMethod(String::length);
         gLambdaMethod((int x, int y) -> {return x + y;});
+
+        int i = 10; // effectively final
+//        i = 15;
+        lambdaMethod((String s) -> s.length() + i);
+//        i = 15;
     }
 
     static void lambdaMethod(SomeInterface_H h) {
@@ -33,3 +39,4 @@ interface SomeInterface_H {
 interface  SomeNew_G {
     int method(int x, int y);
 }
+
