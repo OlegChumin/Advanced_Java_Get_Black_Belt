@@ -10,9 +10,10 @@ public class LambdaSample2 {
             }
         });
 
-        def((A) a -> 18);
-        def((B) b -> "Hi" );
+        def((A) a -> {return a;});
+        def((B) b -> b);
 
+//        def((I) i -> 18);
         def(() -> 18);
         def(() -> "Hi");
 

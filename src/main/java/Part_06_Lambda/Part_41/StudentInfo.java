@@ -66,5 +66,8 @@ public class StudentInfo {
             System.out.println("Filtered by average grade");
             return student.averageGrade > 8;
         });
+
+        StudentChecks studentChecks = student -> student.averageGrade > 8;
+        search.testStudents(students, studentChecks);
     }
 }
