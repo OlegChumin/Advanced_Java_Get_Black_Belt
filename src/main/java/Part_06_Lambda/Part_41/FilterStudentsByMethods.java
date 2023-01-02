@@ -2,6 +2,7 @@ package Part_06_Lambda.Part_41;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class FilterStudentsByMethods {
     void printStudentOverGrade(ArrayList<Student> al, double grade) {
@@ -46,6 +47,16 @@ public class FilterStudentsByMethods {
         System.out.println("Students, filtered using check() from interface StudentCheck");
         for (Student element: al) {
             if(sc.check(element)) {
+                System.out.println(element);
+            }
+        }
+        printEndLine();
+    }
+
+    void testStudentsUsingPredicate(ArrayList<Student> al, Predicate<Student> predicate) {
+        System.out.println("Students, filtered using test() from Predicate <T> T");
+        for (Student element: al) {
+            if(predicate.test(element)) {
                 System.out.println(element);
             }
         }

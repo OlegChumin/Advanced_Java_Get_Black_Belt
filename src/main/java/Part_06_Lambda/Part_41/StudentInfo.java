@@ -82,5 +82,7 @@ public class StudentInfo {
         });
 
         Collections.sort(students, (o1, o2) -> o1.age - o2.age);
+
+        search.testStudentsUsingPredicate(students, element -> element.averageGrade > 8);
     }
 }

@@ -1,6 +1,4 @@
-package Part_06_Lambda;
-
-import java.util.function.Predicate;
+package Part_06_Lambda.Part_42;
 
 public class Part_42_02_SampleOfFinalAndEffectivelyFinal {
 
