@@ -1,6 +1,6 @@
-package Part_06_Lambda;
+package Part_06_Lambda.Part_41;
 
-public class Part_41_02_LambdaSample {
+public class LambdaSample {
     //method with interface reference as parameter
     static void newSomeMethod(SomeInterface someInterfaceEntity) {
         System.out.println(someInterfaceEntity.someMethod("Hi")); // calling method from interface as a class
