@@ -12,7 +12,6 @@ public class SampleOfAtomicMethodAccumulateAndGet {
             // Print AtomicReference
             System.out.println(
                     "The AtomicReference before update: " + ref);
-
             // Value to apply accumulateAndGet
             int x = 45654;
 
@@ -26,6 +25,25 @@ public class SampleOfAtomicMethodAccumulateAndGet {
 
             System.out.println(
                     "The AtomicReference after update: " + ref);
+
+
+            System.out.println();
+
+            // AtomicReference with value
+            AtomicReference<String> refNew
+                    = new AtomicReference<String>("Hallo");
+
+            // Value to apply accumulateAndGet
+            String y = "Welcome";
+
+            BinaryOperator addTo = (d, p) -> p + " to " + d;
+
+            System.out.println(
+                    "The AtomicReference before update: " + refNew);
+            refNew.accumulateAndGet(y, addTo);
+            System.out.println(
+                    "The AtomicReference after update: " + refNew);
+
         }
     }
 }
