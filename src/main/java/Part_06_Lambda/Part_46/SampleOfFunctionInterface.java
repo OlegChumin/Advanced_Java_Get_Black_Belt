@@ -1,6 +1,8 @@
 package Part_06_Lambda.Part_46;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 
 public class SampleOfFunctionInterface {
     public static void main(String[] args) {
@@ -18,5 +20,20 @@ public class SampleOfFunctionInterface {
         mai_students.add(student4);
         mai_students.add(student5);
         mai_students.add(student6);
+
+//        Function<MAI_Students, Double> function = maiStudent -> 4.14; //sample
+        double averageGrade = avrOfSmth(mai_students, student -> student.averageGrade);
+        System.out.println(averageGrade);
+
+        double averageAge = avrOfSmth(mai_students, student -> (double) student.age);
+        System.out.println(averageAge);
+    }
+
+    private static double avrOfSmth(List<MAI_Students> list, Function<MAI_Students, Double> function) {
+        double result = 0;
+        for (MAI_Students element: list) {
+            result += function.apply(element);
+        }
+        return result / list.size();
     }
 }
