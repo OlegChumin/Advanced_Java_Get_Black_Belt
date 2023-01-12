@@ -15,8 +15,18 @@ public class SampleOfAtomicInteger {
         nonSynchronizedCounter++; // non atomic operation
     }
 
-    public static void atomicIncrement() { //added synchronized
-        atomicCounter.incrementAndGet(); // non atomic operation
+    public static void atomicIncrement() { //no need to be synchronized
+        atomicCounter.incrementAndGet(); // atomic operation
+    }
+
+    public static void atomicChange() { //no need to be synchronized and no data race
+        atomicCounter.incrementAndGet(); // atomic operation  atomicCounter++
+        atomicCounter.decrementAndGet(); // atomicCounter--
+        atomicCounter.addAndGet(5); // atomicCounter += 5
+        atomicCounter.getAndAdd(5); // = atomicCounter then atomicCounter += 5;
+        atomicCounter.getAndAdd(-5); // = atomicCounter then atomicCounter -= 5;
+        atomicCounter.getAndDecrement(); // = atomicCounter then atomicCounter--;
+        atomicCounter.getAndIncrement(); // = atomicCounter then atomicCounter++;
     }
 
     public static void main(String[] args) throws InterruptedException {
