@@ -3,6 +3,7 @@ package Part_06_Lambda.Part_41;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class StudentInfo {
     public static void main(String[] args) {
@@ -84,5 +85,13 @@ public class StudentInfo {
         Collections.sort(students, (o1, o2) -> o1.age - o2.age);
 
         search.testStudentsUsingPredicate(students, element -> element.averageGrade > 8);
+
+        Predicate<Student> predicate1 = student -> student.averageGrade > 7.5;
+        Predicate<Student> predicate2 = student -> student.maleFemale == 'm';
+
+        search.testStudents(students, (StudentChecks) predicate1.and(predicate2));
+        search.testStudents(students, (StudentChecks) predicate1.or(predicate2));
+
+        search.testStudents(students, (StudentChecks) predicate1.negate());
     }
 }

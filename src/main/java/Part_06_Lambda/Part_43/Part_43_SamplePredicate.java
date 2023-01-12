@@ -1,4 +1,4 @@
-package Part_06_Lambda;
+package Part_06_Lambda.Part_43;
 
 public class Part_43_SamplePredicate {
     public static void main(String[] args) {
