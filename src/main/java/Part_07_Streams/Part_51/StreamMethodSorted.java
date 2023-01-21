@@ -8,7 +8,5 @@ public class StreamMethodSorted {
         System.out.println(Arrays.toString(array));
         array = Arrays.stream(array).sorted().toArray();
         System.out.println(Arrays.toString(array));
-
-
     }
 }
