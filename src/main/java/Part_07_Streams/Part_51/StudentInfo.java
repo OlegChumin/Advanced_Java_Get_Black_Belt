@@ -28,6 +28,7 @@ public class StudentInfo {
 
         System.out.println(students);
         students = (ArrayList<Student>) students.stream().sorted((x, y) -> x.name.compareTo(y.name)).collect(Collectors.toList());
+//        students = (ArrayList<Student>) students.stream().sorted((x, y) -> x.name.compareTo(y.name)).collect(Collectors.toList());
         System.out.println(students);
     }
 }
