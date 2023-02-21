@@ -22,6 +22,11 @@ public class Employee {
         this.salary = salary;
     }
 
+    private Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public double getSalary() {
         return salary;
     }
@@ -33,6 +38,14 @@ public class Employee {
     private void changeDepartment(String department) {
         this.department =  department;
         System.out.println("New department is: " + department);
+    }
+
+    public void increaseSalary() {
+        salary *= 2;
+    }
+
+    public void increaseSalary(int threeTimes) {
+        salary *= 3;
     }
 
     @Override
