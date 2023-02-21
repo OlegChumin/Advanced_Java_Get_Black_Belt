@@ -30,8 +30,18 @@ public class Employee {
         this.salary = salary;
     }
 
-    private void changeDepartment(String newDepartment) {
-        this.department =  newDepartment;
+    private void changeDepartment(String department) {
+        this.department =  department;
         System.out.println("New department is: " + department);
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", department='" + department + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
