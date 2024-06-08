@@ -47,7 +47,7 @@ class SuperInfo<T> { // T - type placeHolder also K, E, V
 }
 
 class GetMethodNew {
-    public static <T extends Number> T getSecondElement(ArrayList<T > arrayList) {
+    public static <T extends Number&I1&I2> T getSecondElement(ArrayList<T > arrayList) {
         return arrayList.get(1); // ArrayList<T extends Number> нельзя
     }
 }

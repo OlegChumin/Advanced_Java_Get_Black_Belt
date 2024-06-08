@@ -18,13 +18,13 @@ public class SampleOfWildCardGenerics {
         listDouble.add(3.14);
         listDouble.add(3.15);
         listDouble.add(3.16);
-        shoListInfo(listDouble);
+        showListInfo(listDouble);
 
         List<String> listString = new ArrayList<>();
         listString.add("Hallo");
         listString.add("OK");
         listString.add("GoodBye");
-        shoListInfo(listString);
+        showListInfo(listString);
 
         System.out.println(summ((ArrayList<? extends Number>) listDouble));
 
@@ -40,7 +40,7 @@ public class SampleOfWildCardGenerics {
 
     }
 
-    static void shoListInfo(List<?> list) { // нельзя Object
+    static void showListInfo(List<?> list) { // нельзя Object
         System.out.println(list);
     }
 
