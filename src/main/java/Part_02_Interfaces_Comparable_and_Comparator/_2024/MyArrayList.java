@@ -1,6 +1,7 @@
 package Part_02_Interfaces_Comparable_and_Comparator._2024;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 /**
@@ -23,7 +24,7 @@ public class MyArrayList extends ArrayList<String> {
     }
 
     public static void main(String[] args) {
-        ArrayList arrayList = new ArrayList();
+        List<String> arrayList = new ArrayList();
         arrayList.add("Hello");
         arrayList.add("World");
         arrayList.add("!");
