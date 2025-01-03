@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
 
 /**
  * Класс UserViaLombok демонстрирует использование Lombok для генерации конструкторов, геттеров и toString.
@@ -20,7 +23,7 @@ import lombok.ToString;
  */
 @Getter
 @ToString
-@NoArgsConstructor
+//@NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -28,4 +31,13 @@ public class UserViaLombok {
     private String name;
     private int age;
     private String position;
+}
+
+class LombokSample {
+    static UserViaLombok userViaLombok;
+
+    public static void main(String[] args) {
+        userViaLombok = new UserViaLombok("Sample_Name", 20, "worker");
+        System.out.println("UserViaLombok " + userViaLombok.getClass());
+    }
 }
