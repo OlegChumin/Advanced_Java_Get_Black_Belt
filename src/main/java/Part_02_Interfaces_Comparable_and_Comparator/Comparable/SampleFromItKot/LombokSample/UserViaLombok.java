@@ -1,36 +1,31 @@
 package Part_02_Interfaces_Comparable_and_Comparator.Comparable.SampleFromItKot.LombokSample;
 
-
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 /**
- * @NoArgsConstructor
- * Генерирует конструктор без аргументов.
- *
- * @RequiredArgsConstructor
- * Генерирует конструктор для полей, помеченных как final, и полей с аннотацией @NotNull.
- *
- * @AllArgsConstructor
- * Генерирует конструктор со всеми полями класса.
- *
- * @Builder
- * Позволяет создавать объекты класса с использованием паттерна "Builder".
- * Эта аннотация не только генерирует конструктор, но и предоставляет удобный API для построения объектов.
+ * Класс UserViaLombok демонстрирует использование Lombok для генерации конструкторов, геттеров и toString.
+ * <p>
+ * Используемые аннотации:
+ * <ul>
+ *     <li>@NoArgsConstructor - создает конструктор без аргументов.</li>
+ *     <li>@RequiredArgsConstructor - создает конструктор для всех final полей или полей с аннотацией @NonNull.</li>
+ *     <li>@AllArgsConstructor - создает конструктор со всеми полями класса.</li>
+ *     <li>@Builder - предоставляет удобный API для создания объектов через паттерн "Builder".</li>
+ * </ul>
  */
-
 @Getter
 @ToString
+@NoArgsConstructor
+@RequiredArgsConstructor
 @AllArgsConstructor
-public class UserViaLombok implements Comparable<UserViaLombok> {
+@Builder
+public class UserViaLombok {
     private String name;
     private int age;
-    private int salary;
-
-    @Override
-    public int compareTo(UserViaLombok other) {
-        // Реализация метода сравнения
-        return Integer.compare(this.salary, other.salary);
-    }
+    private String position;
 }
