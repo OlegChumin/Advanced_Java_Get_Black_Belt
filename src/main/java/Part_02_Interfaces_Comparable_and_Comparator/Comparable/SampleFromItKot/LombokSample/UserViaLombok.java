@@ -3,12 +3,8 @@ package Part_02_Interfaces_Comparable_and_Comparator.Comparable.SampleFromItKot.
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
 
 /**
  * Класс UserViaLombok демонстрирует использование Lombok для генерации конструкторов, геттеров и toString.
