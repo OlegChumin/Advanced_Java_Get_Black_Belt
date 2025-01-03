@@ -24,7 +24,7 @@ public class MyArrayList extends ArrayList<String> {
     }
 
     public static void main(String[] args) {
-        List<String> arrayList = new ArrayList();
+        List<String> arrayList = new ArrayList<>();
         arrayList.add("Hello");
         arrayList.add("World");
         arrayList.add("!");
